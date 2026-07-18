@@ -10,6 +10,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>BAGC6 Labs, rehearse the hardest workplace conversations</title>
+<script>if('scrollRestoration' in history)history.scrollRestoration='manual';if(location.hash)history.replaceState(null,'',location.pathname+location.search);</script>
 <meta name="description" content="BAGC6 Labs lets your people practise difficult workplace conversations with an AI counterpart, then gives them a scored debrief. Licensed to your organisation." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://labs.bagc6.com/" />
@@ -245,6 +246,7 @@
   .lab.growing h3 { color: var(--teal); }
 
   /* reveal */
+  section[id] { scroll-margin-top: 78px; }
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
   .reveal.in { opacity: 1; transform: none; }
 
@@ -513,6 +515,16 @@
     entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+
+  // In-page buttons scroll smoothly without leaving a #section in the address bar,
+  // so the link you copy always opens at the top of the page.
+  document.querySelectorAll('a[href^="#"]').forEach((a) => {
+    a.addEventListener('click', (e) => {
+      const id = a.getAttribute('href').slice(1);
+      const target = id && document.getElementById(id);
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
 </script>
 
 <script>
