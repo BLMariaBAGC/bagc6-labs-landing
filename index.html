@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--
   BAGC6 Labs landing page. Self-contained: logo is embedded, contact form is wired to Web3Forms.
-  Enquiries are sent to the email registered with Web3Forms (maria@bagc6.co.uk).
+  Enquiries are sent to the email registered with Web3Forms (labs@bagc6.com).
   Optional: replace the three outcome cards with a real pilot quote when you have one.
   To deploy: place this file at your labs.bagc6 subdomain.
 -->
@@ -32,7 +32,7 @@
   "@type": "Organization",
   "name": "BAGC6 Labs",
   "url": "https://labs.bagc6.com/",
-  "email": "maria@bagc6.co.uk",
+  "email": "labs@bagc6.com",
   "description": "A practice tool for difficult workplace conversations. People rehearse with an AI counterpart and receive a scored debrief. Licensed to organisations.",
   "image": "https://labs.bagc6.com/og-image.png",
   "logo": "https://labs.bagc6.com/og-image.png",
@@ -513,7 +513,7 @@
 
       <button type="submit" class="btn-primary form-btn">Arrange a conversation</button>
       <p class="form-status" id="cf-status" role="status" aria-live="polite"></p>
-      <p class="form-fallback">Prefer email? Write to <a href="mailto:maria@bagc6.co.uk">maria@bagc6.co.uk</a></p>
+      <p class="form-fallback">Prefer email? Write to <a href="mailto:labs@bagc6.com">labs@bagc6.com</a></p>
     </form>
   </div>
 </section>
@@ -524,7 +524,7 @@
     <nav class="foot-links">
       <a href="privacy.html">Privacy</a>
       <a href="cookies.html">Cookies</a>
-      <a href="mailto:maria@bagc6.co.uk">maria@bagc6.co.uk</a>
+      <a href="mailto:labs@bagc6.com">labs@bagc6.com</a>
       <span class="cpr">&copy; 2026 BAGC6 Labs</span>
     </nav>
   </div>
@@ -569,11 +569,11 @@
           statusEl.textContent = 'Thank you. Your message is on its way, and I will be in touch shortly.';
         } else {
           statusEl.className = 'form-status err';
-          statusEl.textContent = 'Something went wrong. Please email maria@bagc6.co.uk instead.';
+          statusEl.textContent = 'Something went wrong. Please email labs@bagc6.com instead.';
         }
       } catch (err) {
         statusEl.className = 'form-status err';
-        statusEl.textContent = 'Something went wrong. Please email maria@bagc6.co.uk instead.';
+        statusEl.textContent = 'Something went wrong. Please email labs@bagc6.com instead.';
       }
     });
   }
