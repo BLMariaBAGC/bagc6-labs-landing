@@ -398,6 +398,31 @@ header.bar{background:#06151c;border-bottom:0}
 .practice-option h3{color:#01293A;font-size:28px;font-weight:500;margin-bottom:14px}
 .practice-option p{color:#4A6169;font-size:16px;line-height:1.65}
 @media(max-width:600px){.practice-options{grid-template-columns:1fr}.practice-option{padding:26px}}
+
+/* A genuine Conversation Lab example, with selected excerpts */
+.btn-sample{display:inline-block;padding:14px 22px;border:1px solid #84CBD2;border-radius:2px;color:#C9F6FA;font-size:.95rem;font-weight:500;text-decoration:none}
+.btn-sample:hover{background:rgba(201,246,250,.1);border-color:#C9F6FA}
+.sample-debrief{background:#FBFCFC;scroll-margin-top:110px}
+.sample-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:64px;align-items:start}
+.sample-debrief .lead{font-size:17px}
+.sample-debrief .sample-context{font-size:14px;color:#4A6169;margin:22px 0 28px;max-width:48ch}
+.sample-card{background:#01293A;border:1px solid #609FA6;border-top:4px solid #609FA6;border-radius:18px;padding:32px;color:#D7EDF0}
+.sample-card .eyebrow{color:#84CBD2;margin-bottom:16px;font-size:11px}
+.sample-card h3{font-size:32px;font-weight:500;color:#FBFCFC;line-height:1.15;margin-bottom:24px}
+.sample-excerpt{border-top:1px solid rgba(201,246,250,.18);padding-top:20px;margin-top:20px}
+.sample-excerpt h4{font-family:var(--body);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#E2BC72;margin-bottom:10px}
+.sample-excerpt p{font-size:15px;line-height:1.7}
+.sample-needs{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:12px}
+.sample-needs div{border:1px solid #609FA6;border-radius:8px;padding:14px}
+.sample-needs div:last-child{border-color:#D4A853}
+.sample-needs strong{display:block;font-size:12px;color:#C9F6FA;margin-bottom:8px}
+.sample-needs div:last-child strong{color:#E2BC72}
+.sample-needs p{font-size:14px;line-height:1.6}
+.sample-disclosure{font-size:12px!important;color:#B3CDD2;margin-top:22px}
+.sample-debrief .sample-footnote{font-size:13px;color:#4A6169;max-width:48ch;margin-top:18px}
+@media(max-width:860px){.sample-grid{grid-template-columns:1fr;gap:32px}}
+@media(max-width:600px){.sample-card{padding:26px}.sample-card h3{font-size:29px}.sample-needs{grid-template-columns:1fr}.sample-debrief{scroll-margin-top:140px}}
+
 </style>
 </head>
 <body>
@@ -408,7 +433,7 @@ header.bar{background:#06151c;border-bottom:0}
 <span class="eyebrow">Practice for the conversations that decide everything</span>
 <h1>Your managers get one take at the hardest conversations. <em>Give them a rehearsal.</em></h1>
 <p class="lede">BAGC6 Labs lets your people rehearse the hardest workplace conversations before they have them for real, then gives them structured feedback on how they handled the conversation.</p>
-<div class="actions"><a class="btn-primary" href="#contact">Arrange a conversation</a><a class="btn-ghost" href="#how">See how it works</a></div>
+<div class="actions"><a class="btn-primary" href="#contact">Arrange a conversation</a><a class="btn-sample" href="#sample-debrief">See a sample debrief</a><a class="btn-ghost" href="#how">See how it works</a></div>
 </div><div class="demo-wrap"><div class="transcript" role="group" aria-label="Illustrative performance review conversation">
 <div class="tag">Performance review, in progress</div>
 <h2 class="demo-question">“Why am I only hearing this now?”</h2>
@@ -455,6 +480,22 @@ header.bar{background:#06151c;border-bottom:0}
 <article class="practice-option"><span class="eyebrow">Vary the pressure</span><h3>Practise different reactions</h3><p>Choose a neutral, cooperative, challenging, or difficult response. Rehearse the same situation with different reactions, and practise adapting your approach.</p></article>
 </div><p class="feedback-note">Feedback differs by Lab and activity. Each practice space supports the skill being rehearsed.</p></div></section>
 <section class="after-workshop" id="workshops"><div class="wrap editorial-grid"><div><span class="eyebrow">After the workshop</span><h2>The workshop ends. The practice needs to continue.</h2></div><div><p class="lead">A workshop introduces new approaches and gives people an opportunity to practise. Continued rehearsal helps them apply that learning when familiar pressures return. BAGC6 Labs provides a place to keep practising after the workshop, with realistic situations and private feedback.</p><a class="workshop-link" href="/workshops/difficult-conversations/">Pair BAGC6 Labs with a facilitated workshop <span aria-hidden="true">→</span></a></div></div></section>
+
+<section class="sample-debrief" id="sample-debrief"><div class="wrap sample-grid">
+<div><span class="eyebrow">Inside the Conversation Lab</span><h2>See what your people receive.</h2>
+<p class="lead">Structured feedback on their approach, what worked, and what to practise next.</p>
+<p class="sample-context">In this fictional scenario, a manager speaks to James, a junior colleague, about repeated errors in weekly reports. James responds with a resistant tone.</p>
+<a class="btn-primary" href="/samples/conversation-lab-debrief.pdf" target="_blank" rel="noopener">Read the full sample debrief <span aria-hidden="true">↗</span></a>
+<p class="sample-footnote">PDF, opens in a new tab. An actual AI-generated Conversation Lab debrief from a fictional practice scenario. Feedback differs by Lab and activity.</p>
+</div>
+<article class="sample-card" aria-label="Selected excerpts from a genuine Conversation Lab sample debrief">
+<span class="eyebrow">Conversation Lab · Sample excerpts</span><h3>Steady Under Pressure, But Softer Than Needed</h3>
+<div class="sample-excerpt"><h4>A strength</h4><p>You responded to James's self-awareness at the end by opening the door to a practical solution, which moved the conversation toward resolution rather than leaving it in the problem.</p></div>
+<div class="sample-excerpt"><h4>What to practise next</h4><p>Next time, lead with the concrete observable facts, name the actual impact on the team, and state the standard you need met, all before you invite their perspective.</p></div>
+<div class="sample-excerpt"><h4>Both sides of the conversation</h4><div class="sample-needs"><div><strong>Your needs</strong><p>Certainty and contribution</p></div><div><strong>James's needs</strong><p>Significance and connection</p></div></div></div>
+<p class="sample-disclosure">Selected excerpts from the original debrief. The full PDF is unchanged. Needs are the AI's interpretation of this exchange.</p>
+</article></div></section>
+
 <section class="org"><div class="wrap org-grid"><div><span class="eyebrow">For your organisation</span><h2>Practice for your people. Licensed to your organisation.</h2></div><ul class="points">
 <li><strong>Access for your team.</strong> We agree the Labs, participants, and licence arrangements with your organisation.</li>
 <li><strong>Private practice.</strong> Your organisation does not receive individual Lab conversations or scores.</li>
