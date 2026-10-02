@@ -423,6 +423,24 @@ header.bar{background:#06151c;border-bottom:0}
 @media(max-width:860px){.sample-grid{grid-template-columns:1fr;gap:32px}}
 @media(max-width:600px){.sample-card{padding:26px}.sample-card h3{font-size:29px}.sample-needs{grid-template-columns:1fr}.sample-debrief{scroll-margin-top:140px}}
 
+
+.sample-open{border:0;cursor:pointer;text-align:left;margin-bottom:4px}
+.sample-viewer{width:min(1000px,96vw);max-height:90vh;padding:0;border:1px solid #609FA6;border-radius:14px;margin:auto;background:#EAF5F5;color:#0C2029;overflow:auto}
+.sample-viewer::backdrop{background:rgba(1,20,29,.82)}
+.sample-viewer-bar{position:sticky;top:0;z-index:1;background:#01293A;color:#C9F6FA;padding:18px 24px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+.sample-viewer-bar h2{font-size:25px;font-weight:500;line-height:1.2;margin:0;color:#FBFCFC}
+.sample-viewer-tools{display:flex;flex-wrap:wrap;gap:10px}
+.sample-viewer-tools button{font:500 14px var(--body);border:1px solid #84CBD2;border-radius:4px;background:transparent;color:#C9F6FA;padding:9px 14px;cursor:pointer}
+.sample-viewer-tools button:hover{background:rgba(201,246,250,.12)}
+.sample-viewer-note{padding:20px 24px;font-size:14px;line-height:1.6}
+.sample-pages{padding:0 24px 24px;overflow-x:auto}
+.sample-pages figure{margin:0 auto 24px;max-width:920px}
+.sample-pages figcaption{font-size:12px;font-weight:600;color:#416E75;margin-bottom:10px}
+.sample-pages img{display:block;width:100%;height:auto;border:1px solid #CADDE0;background:white}
+.sample-pages.is-enlarged figure{min-width:800px}
+.sample-open:focus-visible,.sample-viewer button:focus-visible{outline:3px solid #D4A853;outline-offset:4px}
+@media(max-width:600px){.sample-viewer-bar{padding:16px}.sample-viewer-bar h2{font-size:22px}.sample-viewer-note{padding:16px}.sample-pages{padding:0 16px 16px}}
+
 </style>
 </head>
 <body>
@@ -483,8 +501,9 @@ header.bar{background:#06151c;border-bottom:0}
 
 <section class="sample-debrief" id="sample-debrief"><div class="wrap sample-grid">
 <div><span class="eyebrow">Inside the Conversation Lab</span><h2>See what your people receive.</h2>
-<p class="lead">Structured feedback on their approach, what worked, and what to practise next.</p>
+<p class="lead">This three-page example includes scores, detailed feedback, both people’s needs, and a suggested response to practise.</p>
 <p class="sample-context">In this fictional scenario, a manager speaks to James, a junior colleague, about repeated errors in weekly reports. James responds with a resistant tone.</p>
+<button type="button" class="btn-primary sample-open" id="sample-open" aria-haspopup="dialog">View the full sample debrief</button>
 
 <p class="sample-footnote">Selected excerpts from an actual AI-generated Conversation Lab debrief, based on a fictional practice scenario. Feedback differs by Lab and activity.</p>
 </div>
@@ -566,6 +585,33 @@ header.bar{background:#06151c;border-bottom:0}
       }
     });
   }
+</script>
+
+
+<dialog class="sample-viewer" id="sample-viewer" aria-labelledby="sample-viewer-title" aria-describedby="sample-viewer-note">
+<div class="sample-viewer-bar"><h2 id="sample-viewer-title">Conversation Lab: full sample debrief</h2><div class="sample-viewer-tools"><button type="button" id="sample-enlarge" aria-pressed="false">Enlarge pages</button><button type="button" id="sample-close" autofocus>Close preview</button></div></div>
+<p class="sample-viewer-note" id="sample-viewer-note">All three pages of the original AI-generated debrief, unchanged. This is a fictional practice scenario. Use “Enlarge pages” for a closer view, then scroll across if needed.</p>
+<div class="sample-pages" id="sample-pages">
+<figure><figcaption>Page 1 of 3: performance, scores, communication style, and strengths</figcaption><img src="/samples/conversation-debrief-page-1.png" width="1061" height="1500" loading="lazy" alt="Page 1 of the sample Conversation Lab debrief: Steady Under Pressure, But Softer Than Needed. Overall performance, six communication scores, communication style, and what went well." /></figure>
+<figure><figcaption>Page 2 of 3: development, both people’s needs, and next steps</figcaption><img src="/samples/conversation-debrief-page-2.png" width="1061" height="1500" loading="lazy" alt="Page 2 of the sample debrief: primary development area, your needs and James's needs in separate highlighted rows, a takeaway, and what to practise next." /></figure>
+<figure><figcaption>Page 3 of 3: a suggested response and feedback on language</figcaption><img src="/samples/conversation-debrief-page-3.png" width="1061" height="1500" loading="lazy" alt="Page 3 of the sample debrief: a stronger version of the opening conversation with James and a note on the manager's language." /></figure>
+</div></dialog>
+<script>
+(function(){
+const viewer=document.getElementById('sample-viewer');
+const openButton=document.getElementById('sample-open');
+const closeButton=document.getElementById('sample-close');
+const enlargeButton=document.getElementById('sample-enlarge');
+const pages=document.getElementById('sample-pages');
+openButton.addEventListener('click',()=>viewer.showModal());
+closeButton.addEventListener('click',()=>viewer.close());
+viewer.addEventListener('close',()=>openButton.focus());
+enlargeButton.addEventListener('click',()=>{
+const enlarged=pages.classList.toggle('is-enlarged');
+enlargeButton.setAttribute('aria-pressed',String(enlarged));
+enlargeButton.textContent=enlarged?'Fit pages to screen':'Enlarge pages';
+});
+})();
 </script>
 
 </body>
