@@ -327,6 +327,57 @@
 @media(max-width:860px){.hero-grid,.editorial-grid{grid-template-columns:1fr;gap:30px}.demo-wrap{padding-top:0}.labs{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{padding:48px 0 56px}.bar .actions{gap:14px}.bar .signin{font-size:.82rem}.bar a.link{font-size:.82rem;padding:9px 12px}}
 @media(max-width:600px){.bar .wrap{height:auto;flex-wrap:wrap;padding-top:10px;padding-bottom:14px;gap:8px}.bar .brand{height:48px}.bar .actions{width:100%;justify-content:space-between;gap:10px}.bar .signin .signin-full{display:none}.bar .signin .signin-short{display:inline}.bar a.link .link-full{display:none}.bar a.link .link-short{display:inline}section[id]{scroll-margin-top:140px}.labs{grid-template-columns:1fr}.hero h1{font-size:2.65rem}.transcript{padding:24px}.line{flex-direction:column;gap:6px}.demo-caption{max-width:35ch}}
 
+
+/* Shared visual treatment with the workshop page */
+header.bar{background:#06151c;backdrop-filter:none}.bar .wrap{height:84px}
+.bar .signin{color:#C9F6FA}
+.hero{background:radial-gradient(ellipse at 64% 75%,#104a57 0%,#01293A 48%,#06151c 100%);padding:76px 0 72px}
+.hero::after{display:none}
+.hero-grid{grid-template-columns:1.15fr 1fr;gap:64px;align-items:center}
+.hero h1{font-size:clamp(46px,4.7vw,64px);line-height:1.06;font-weight:500;max-width:18ch;margin-bottom:28px}
+.hero h1 em{display:block;color:#C9F6FA;font-weight:400;margin-top:8px}
+.hero p.lede{font-size:19px;line-height:1.6;max-width:49ch;color:#D7EDF0;margin-bottom:30px}
+.hero .actions{gap:20px}
+.demo-wrap{padding-top:0}
+.transcript{background:rgba(1,26,36,.65);border:1px solid #609FA6;border-top:4px solid #609FA6;border-radius:18px;padding:32px;box-shadow:none}
+.transcript .tag{font-size:11px;letter-spacing:.16em;margin-bottom:24px}
+.transcript .demo-question{font-size:34px;font-weight:500;line-height:1.15;max-width:none;color:#FBFCFC;margin:0 0 26px}
+.transcript .line{display:block;border-top:1px solid rgba(201,246,250,.18);padding-top:20px;margin-bottom:22px}
+.transcript .who{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px;padding-top:0;color:#E2BC72}
+.transcript .said{font-size:17px;line-height:1.65;color:#D7EDF0}
+.demo-caption{font-size:13px;line-height:1.6;color:#C9F6FA;margin:30px 0 0}
+section{padding:72px 0}
+section h2{font-size:clamp(34px,3.6vw,48px);max-width:24ch;font-weight:500;line-height:1.12}
+.suite{padding:64px 0 72px;background:#FBFCFC}
+.labs{gap:22px;margin-top:34px}
+.lab{border:1px solid #CADDE0;border-top:3px solid #609FA6;border-radius:12px;padding:28px;background:#fff}
+.lab h3{font-size:28px;font-weight:500;margin-bottom:14px}
+.lab p,.card p{font-size:16px;line-height:1.65}
+.sales-lab-icon{background:#01293A;border-radius:12px;margin-bottom:18px}
+.why-now{background:#EAF5F5;color:#0C2029}
+.why-now h2{color:#01293A}.why-now .eyebrow{color:#416E75}.why-now .lead{color:#4A6169}
+.editorial-grid{gap:64px}
+.whatis{background:#FBFCFC}
+.cards{gap:22px;margin-top:34px}
+.card{border:1px solid #CADDE0;border-radius:12px;padding:28px}
+.card .num{font-family:var(--body);font-size:12px;font-weight:700;letter-spacing:.12em;color:#416E75;margin-bottom:16px}
+.card h3{font-size:28px;font-weight:500;margin-bottom:14px}
+.after-workshop{background:radial-gradient(ellipse at 80% 80%,#104a57,#01293A);color:#C9F6FA}
+.after-workshop h2{color:#FBFCFC}.after-workshop .eyebrow{color:#84CBD2}.after-workshop .lead{color:#D7EDF0}
+.workshop-link{color:#E2BC72;line-height:1.6}
+.org{padding:72px 0 32px}.org .points li{font-size:16px;line-height:1.65}
+.credibility{padding:28px 0 64px}.credibility p{font-size:16px;padding-top:24px;border-top:1px solid #CADDE0}
+.close{background:linear-gradient(135deg,#01293A,#104652);padding:72px 0;text-align:left}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.close h2{margin:0 0 26px;max-width:20ch}
+.close .contact-intro p{max-width:45ch;margin:0 0 24px;color:#D7EDF0;font-size:18px}
+.close .contact-intro .contact-note{font-size:15px;margin-top:30px}
+.close .contact-form{max-width:none;margin:0}
+.close .form-fallback{font-size:14px}
+footer.foot{background:#06151c}
+@media(max-width:860px){.hero-grid,.editorial-grid,.contact-grid{grid-template-columns:1fr;gap:32px}.hero{padding:48px 0 56px}.hero h1{max-width:22ch;font-size:clamp(42px,7vw,58px)}.hero p.lede{max-width:52ch}.demo-wrap{max-width:none}.labs{grid-template-columns:repeat(2,minmax(0,1fr))}.close .contact-intro p{max-width:55ch}}
+@media(max-width:600px){.bar .wrap{height:auto;min-height:76px}.hero h1{font-size:45px;max-width:18ch}.hero p.lede{font-size:17px}.hero .actions{flex-direction:column;align-items:flex-start;gap:18px}.transcript{padding:26px}.transcript .demo-question{font-size:30px}.transcript .said{font-size:16px}.labs{grid-template-columns:1fr}.suite,section,.close{padding:48px 0}.contact-grid{gap:28px}.close .contact-intro p{font-size:17px}section h2{font-size:36px}.lab,.card{padding:26px}.credibility{padding:26px 0 48px}}
+
 </style>
 </head>
 <body>
@@ -340,9 +391,10 @@
 <div class="actions"><a class="btn-primary" href="#contact">Arrange a conversation</a><a class="btn-ghost" href="#how">See how it works</a></div>
 </div><div class="demo-wrap"><div class="transcript" role="group" aria-label="Illustrative performance review conversation">
 <div class="tag">Performance review, in progress</div>
+<h2 class="demo-question">“Why am I only hearing this now?”</h2>
 <div class="line"><div class="who">Them</div><div class="said">I thought I was doing fine. No one said anything before now.</div></div>
 <div class="line you"><div class="who">You</div><div class="said">That's fair, and I should have raised it sooner. Can we look at the last three reports together?</div></div>
-</div><p class="demo-caption">A difficult moment. A chance to practise before it happens.</p></div></div></section>
+<p class="demo-caption">A difficult moment. A chance to practise before it happens.</p></div></div></div></section>
 <section class="suite" id="labs"><div class="wrap"><span class="eyebrow">The Labs</span><h2>Six practice spaces.</h2><div class="labs"><article class="lab"><span class="sales-lab-icon" aria-hidden="true"><svg viewBox="0 0 44 44" fill="none">
             <path d="M6 13a4.5 4.5 0 0 1 4.5-4.5h13a4.5 4.5 0 0 1 4.5 4.5v7a4.5 4.5 0 0 1-4.5 4.5H15l-6 4.5v-4.5h-.5A4.5 4.5 0 0 1 6 20z" stroke="#3D858C" stroke-width="1.6" stroke-linejoin="round"/>
             <path d="M18 24.5a4.5 4.5 0 0 1 4.5-4.5H33a4.5 4.5 0 0 1 4.5 4.5v6a4.5 4.5 0 0 1-4.5 4.5h-.3v4l-5.7-4H22.5A4.5 4.5 0 0 1 18 30.5z" stroke="#C9F6FA" stroke-width="1.6" stroke-linejoin="round"/>
@@ -386,7 +438,7 @@
 <li><strong>Start with a pilot.</strong> Discuss a focused trial for one team before deciding on wider access.</li>
 </ul></div></section>
 <section class="credibility"><div class="wrap"><p>Designed by <strong>Maria Fuentes</strong>, Performance Strategist and workshop facilitator.</p></div></section>
-<section id="contact" class="close"><div class="wrap"><span class="eyebrow" style="color:var(--amber)">Arrange a conversation</span><h2>Give your managers a rehearsal before the real thing.</h2><p>Tell us about your organisation and the conversations your people need to practise.</p><form id="contact-form" class="contact-form">
+<section id="contact" class="close"><div class="wrap contact-grid"><div class="contact-intro"><span class="eyebrow" style="color:#84CBD2">Arrange a conversation</span><h2>Give your managers a rehearsal before the real thing.</h2><p>Tell us about your organisation and the conversations your people need to practise.</p><p class="contact-note">Discuss access for your team, or start with a focused pilot.</p></div><form id="contact-form" class="contact-form">
       <!-- Web3Forms access key (public by design; tells Web3Forms which inbox to email) -->
       <input type="hidden" name="access_key" value="0e411685-5a4b-4918-95bb-a23a3ba7bc3f" />
       <input type="hidden" name="subject" value="BAGC6 LABS: New enquiry" />
